@@ -134,6 +134,7 @@ class User extends Authenticatable
                 'products.creditos',
                 'products.duracion',
                 'products.fecha_inicio',
+                'products.fecha_fin',
                 'products.beneficios',
                 'products.curso_dirigido',
                 'products.description2',
