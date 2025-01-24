@@ -305,7 +305,7 @@
     "src": "resources/js/DashboardDocente.jsx"
   },
   "resources/js/DashboardEstudiante.jsx": {
-    "file": "assets/DashboardEstudiante-IfGwLeZk.js",
+    "file": "assets/DashboardEstudiante-EssQabji.js",
     "imports": [
       "resources/js/Utils/YTEmbed.jsx",
       "resources/js/Utils/ReactAppend.jsx",

@@ -10,6 +10,7 @@ const FormEstudiante = ({ user }) => {
   const fileInputRef = useRef(null);
   const formUser = useRef({
     id: user.id,
+    dni: user.dni ?? '',
     name: user.name,
     lastname: user.lastname,
     email: user.email,
@@ -149,6 +150,19 @@ const FormEstudiante = ({ user }) => {
           <div className="flex flex-col flex-1 shrink text-gray-600 basis-0 min-w-[240px] max-md:max-w-full">
             <form className="flex flex-col w-full max-md:max-w-full" onSubmit={handleSubmit}>
               <div className="flex flex-wrap gap-5 justify-center items-end w-full max-md:max-w-full">
+                <div className="flex overflow-hidden flex-col flex-1 shrink basis-9 min-h-[76px] min-w-[240px]">
+                  <label htmlFor="dni" className="text-sm tracking-normal leading-loose">DNI</label>
+                  <input
+                    type="text"
+                    id="dni"
+                    name="dni"
+                    defaultValue={formUser.current.dni}
+                    onChange={handleForm}
+                    disabled={formUser.current.dni ? true : false}
+                    className="w-full py-3 px-3 focus:outline-none text-[#CF072C] placeholder-[#CF072C] focus:placeholder-[#CF072C] font-normal text-base bg-[#FFF0F0] rounded-xl border-2 border-transparent focus:border-2 focus:border-[#CF072C] focus:ring-0"
+                    placeholder="DNI"
+                  />
+                </div>
                 <div className="flex overflow-hidden flex-col flex-1 shrink basis-9 min-h-[76px] min-w-[240px]">
                   <label htmlFor="fullName" className="text-sm tracking-normal leading-loose">Nombre completo</label>
                   <input

@@ -666,6 +666,7 @@ class IndexController extends Controller
   public function actualizarPerfil(Request $request)
   {
 
+    $dni = $request->dni;
     $name = $request->name;
     $lastname = $request->lastname;
     $email = $request->email;
@@ -687,10 +688,11 @@ class IndexController extends Controller
     }
 
 
-    if ($user->name == $name &&  $user->lastname == $lastname && $user->email == $email && $user->phone == $phone) {
+    if ($user->dni == $dni && $user->name == $name &&  $user->lastname == $lastname && $user->email == $email && $user->phone == $phone) {
       $imprimir = "Sin datos que actualizar";
       $alert = "question";
     } else {
+      $user->dni = $dni;
       $user->name = $name;
       $user->lastname = $lastname;
       $user->email = $email;
