@@ -7,7 +7,8 @@
   $nota = round($nota * 100) / 100;
 
   $date_begin = $attemp->course->fecha_inicio ? date('d/m/Y', strtotime($attemp->course->fecha_inicio)) : '';
-  $date_end = date('d/m/Y', strtotime($attemp->created_at));
+  // $date_end = date('d/m/Y', strtotime($attemp->created_at));
+  $date_end = $attemp->course->fecha_fin ? date('d/m/Y', strtotime($attemp->course->fecha_fin)) : '';
 
 @endphp
 
@@ -42,11 +43,12 @@
               <dl>
                 <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                   <dt class="text-sm font-medium text-gray-500">Nombre completo</dt>
-                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{$attemp->user->name}} {{$attemp->user->lastname}}</dd>
+                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $attemp->user->name }}
+                    {{ $attemp->user->lastname }}</dd>
                 </div>
                 <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                   <dt class="text-sm font-medium text-gray-500">Número de DNI</dt>
-                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{$attemp->user->dni}}</dd>
+                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $attemp->user->dni }}</dd>
                 </div>
                 <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                   <dt class="text-sm font-medium text-gray-500">Nombre del diplomado</dt>
@@ -54,11 +56,11 @@
                 </div>
                 <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                   <dt class="text-sm font-medium text-gray-500">Inicio del diplomado</dt>
-                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{$date_begin}}</dd>
+                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $date_begin }}</dd>
                 </div>
                 <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                   <dt class="text-sm font-medium text-gray-500">Fin del diplomado</dt>
-                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{$date_end}}</dd>
+                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $date_end }}</dd>
                 </div>
                 <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                   <dt class="text-sm font-medium text-gray-500">Horas lectivas</dt>
@@ -88,7 +90,8 @@
               </div>
               <div class="border-t border-gray-200">
                 <iframe src="/api/certificate/{{ $attemp->id }}#toolbar=0"
-                  class="w-full h-full object-cover rounded-b-lg aspect-[16/11]" frameborder="0" allowfullscreen></iframe>
+                  class="w-full h-full object-cover rounded-b-lg aspect-[16/11]" frameborder="0"
+                  allowfullscreen></iframe>
               </div>
             </div>
           </div>

@@ -39,6 +39,7 @@ class Products extends Model
     'creditos',
     'duracion',
     'fecha_inicio',
+    'fecha_fin',
     'beneficios',
     'curso_dirigido',
     'description2',
