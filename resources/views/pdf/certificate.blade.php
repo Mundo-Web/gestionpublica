@@ -334,20 +334,23 @@
                       <td align="right" valign="middle" style="vertical-align: middle; padding: 15px">
                         <img
                           src="https://api.qrserver.com/v1/create-qr-code/?data={{ rawurlencode(env('APP_URL') . '/certificate/' . $attemp->id) }}"
-                          alt="Logo" class="logo-image"
-                          style="width:100px" />
+                          alt="Logo" class="logo-image" style="width:100px" />
                       </td>
                     </tr>
                   </tbody>
                 </table>
                 <div class="text-container" id="text-container" style="position: relative ; margin-top:20px;">
 
-                  <span style="position: absolute; top: -50px; color: rgba(207, 7, 44, 1); font-weight: bold; ">CERTIFICADO</span>
+                  <span
+                    style="position: absolute; top: -50px; color: rgba(207, 7, 44, 1); font-weight: bold; ">CERTIFICADO</span>
                   <h4 class="title" style="text-transform: uppercase">
                     ESCUELA DE GESTIÓN PÚBLICA Y NEGOCIOS DEL PERÚ
                   </h4>
-                  <p class="description " style="padding-left: 5%; padding-right: 5%; margin-top: 10px">En mérito a su participación
-                    en nuestro <i class="bold-italic" style="text-transform: uppercase ;">{{ $attemp->course->producto }}.</i> Organizado por <b>EGESPP</b>, con una
+                  <p class="description " style="padding-left: 5%; padding-right: 5%; margin-top: 10px">En mérito a su
+                    participación
+                    en nuestro <i class="bold-italic"
+                      style="text-transform: uppercase ;">{{ $attemp->course->producto }}.</i> Organizado por
+                    <b>EGESPP</b>, con una
                     duración de
                     @if ($hours > 0)
                       {{ $hours }} horas
@@ -356,7 +359,7 @@
                       {{ $minutes }} minutos
                     @endif
                     lectivas
-                    del {{ date('Y') }}.
+                    del {{ $attemp->course->fecha_fin ? date('Y', strtotime($attemp->course->fecha_fin)) : date('Y') }}.
                   </p>
                   <p class="name" style="padding-top: 10px;">{{ $attemp->user->name }} {{ $attemp->user->lastname }}
                   </p>
