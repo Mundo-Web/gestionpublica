@@ -259,7 +259,8 @@
       }, */
       {
         dataField: 'alumnos',
-        caption: 'ALUMNOS'
+        caption: 'ALUMNOS',
+        allowFiltering: false
       },
       {
         caption: 'CATEGORIA',
