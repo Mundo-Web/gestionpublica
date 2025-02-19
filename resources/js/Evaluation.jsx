@@ -38,6 +38,7 @@ const Evaluation = ({ evaluation, questions: questionsFromDB, attemp }) => {
         clearInterval(intervalId)
         finishEvaluation()
       }
+      console.log(percentage)
     }, 1000);
 
     return () => clearInterval(intervalId);
