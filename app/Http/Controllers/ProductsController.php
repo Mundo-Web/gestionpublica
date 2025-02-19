@@ -69,9 +69,9 @@ class ProductsController extends Controller
         ->leftJoin('attribute_product_values AS apv', 'products.id', 'apv.product_id')
         ->leftJoin('attributes AS a', 'apv.attribute_id', 'a.id')
         ->leftJoin('tags_xproducts AS txp', 'txp.producto_id', 'products.id')
-        ->leftJoin('categories', 'categories.id', 'products.categoria_id')
-        ->where('categories.visible', true)
-        ->where('categories.status', true)
+        ->leftJoin('categories as category', 'category.id', 'products.categoria_id')
+        ->where('category.visible', true)
+        ->where('category.status', true)
         ->where('products.status', true);
 
       if (Auth::check()) {
