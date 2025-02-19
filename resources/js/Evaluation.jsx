@@ -38,11 +38,6 @@ const Evaluation = ({ evaluation, questions: questionsFromDB, attemp }) => {
         clearInterval(intervalId)
         finishEvaluation()
       }
-      console.log({
-        created_at: attemp.created_at,
-        percentageElapsed,
-        startsAt
-      })
     }, 1000);
 
     return () => clearInterval(intervalId);
