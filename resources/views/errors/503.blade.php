@@ -68,7 +68,7 @@
 </head>
 <body>
     <div class="maintenance-container">
-        <img style="width: 250px" src="https://cdn-01-artemis.media-brady.com/Assets/ImageRoot/DMEU_WebPipeline/5_/11/DMEU_Y5138525_11_std.lang.all.gif" alt="Maintenance Illustration" class="maintenance-image">
+        <img style="width: 400px" src="https://cdn-01-artemis.media-brady.com/Assets/ImageRoot/DMEU_WebPipeline/5_/11/DMEU_Y5138525_11_std.lang.all.gif" alt="Maintenance Illustration" class="maintenance-image">
         <h1>Estamos realizando tareas de mantenimiento</h1>
         <p>Disculpa las molestias, pero actualmente estamos trabajando en mejorar nuestro sitio web.</p>
     </div>
