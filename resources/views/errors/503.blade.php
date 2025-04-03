@@ -48,6 +48,11 @@
             margin-bottom: 20px;
             color: #555;
         }
+
+        img{
+            max-height: 300px;
+            width: auto;
+        }
         
         @media (max-width: 768px) {
             h1 {
