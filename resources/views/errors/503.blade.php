@@ -52,6 +52,7 @@
         img{
             max-height: 300px;
             width: auto;
+            height: 300px;
         }
         
         @media (max-width: 768px) {
