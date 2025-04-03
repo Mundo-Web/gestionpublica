@@ -68,7 +68,7 @@
 </head>
 <body>
     <div class="maintenance-container">
-        <img src="https://cdn-icons-png.flaticon.com/512/949/949890.png" alt="Maintenance Illustration" class="maintenance-image">
+        <img style="width: 250px" src="https://cdn-icons-png.flaticon.com/512/949/949890.png" alt="Maintenance Illustration" class="maintenance-image">
         <h1>Estamos realizando tareas de mantenimiento</h1>
         <p>Disculpa las molestias, pero actualmente estamos trabajando en mejorar nuestro sitio web.</p>
     </div>
